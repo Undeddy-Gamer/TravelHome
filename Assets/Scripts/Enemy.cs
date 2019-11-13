@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        //Make the points visible in unity editor
         points = waypointParent.GetComponentsInChildren<Transform>();
         if (points != null)
         {
@@ -62,13 +63,11 @@ public class Enemy : MonoBehaviour
         {
             currentWaypoint++;
         }
-
+        //If end of points change back to first
         if (currentWaypoint == points.Length)
         {
             currentWaypoint = 1;
         }
 
-
-        //
     }
 }
