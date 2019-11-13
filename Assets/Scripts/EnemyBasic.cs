@@ -21,6 +21,8 @@ public class EnemyBasic : MonoBehaviour
 
     void OnDrawGizmos()
     {
+
+        //Make the points visible in unity editor
         points = waypointParent.GetComponentsInChildren<Transform>();
         if (points != null)
         {
@@ -50,18 +52,17 @@ public class EnemyBasic : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, currentPoint.position, speed * Time.deltaTime);
         //Check if distance between waypoint is close
         float distance = Vector3.Distance(transform.position, currentPoint.position);
+
         //Switch to next waypoint
         if (distance < waypointDistance)
         {
             currentWaypoint++;
         }
-
+        //If end of points change back to first
         if (currentWaypoint == points.Length)
         {
             currentWaypoint = 1;
         }
 
-
-        //
     }
 }

@@ -26,19 +26,18 @@ public class Player : MonoBehaviour
 
         Vector3 direction = new Vector3(inputH, 0, inputV);
 
-        
+        // Turbo if shift pressed
         if (Input.GetKey(KeyCode.LeftShift))
         {
             rigid.AddForce(direction * (speed * 1.5f)); 
         }
         else
         {
+            //else normal speed
             rigid.AddForce(direction * speed);
         }
 
-
-        //
-
+        //Cheat/test key
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
@@ -46,7 +45,7 @@ public class Player : MonoBehaviour
 
     }
 
-
+    //Cheat Key (jump)
     void Jump()
     {
         Vector3 upit = new Vector3(0, 60, 0);
@@ -54,6 +53,7 @@ public class Player : MonoBehaviour
         cheater = true;
     }
 
+    // set key to true for 'home'
     public void GetKey()
     {
         hasKey = true;
