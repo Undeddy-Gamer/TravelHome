@@ -16,10 +16,6 @@ public class Respawn : MonoBehaviour
        
     }
 
-    void ResetLevel()
-    {
-        // not used
-    }
 
 
 }

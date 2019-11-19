@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour    
 {
-    /*
-     * 
-     * 
-     * 
-     */
-
-    //<access-specifier> <data-type> <variable name>
+    //Plaer class with basic control system
     public Rigidbody rigid;
     public static float speed = 5F;
     public static bool hasKey = false;
-    public static bool isBadBox = false;
-    public static bool cheater = false;
+    
 
     // Update is called once per frame
     void Update()
@@ -49,8 +42,8 @@ public class Player : MonoBehaviour
     void Jump()
     {
         Vector3 upit = new Vector3(0, 60, 0);
-        rigid.AddForce(upit);
-        cheater = true;
+        //add some vertical force to player
+        rigid.AddForce(upit);        
     }
 
     // set key to true for 'home'
