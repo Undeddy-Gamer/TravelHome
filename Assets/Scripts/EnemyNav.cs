@@ -31,7 +31,7 @@ public class EnemyNav : MonoBehaviour
         points = waypointParent.GetComponentsInChildren<Transform>();
         if (points != null)
         {
-            // set gizmo colo to red
+            // set gizmo colour to red
             Gizmos.color = Color.red;
 
             for (int i = 1; i < points.Length -1; i++)
